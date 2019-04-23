@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Deliresto</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
+        <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="top-part">
+                <div class="top-part__input">
+                    <a href="#"><img src="../img/logo.png" alt="logo"></a>
+                    <input type="text" class="input placement-input" placeholder="RADIO FRANCE (PORTE C - PDT KENNEDY) - 116 Avenue du Président Kennedy, 75016 Paris">
+                    <a href="#"><ion-icon name="close" class="close"></ion-icon></a>
+                </div>
+                <div class="top-part__input">
+                    <div class="icons">
+                        <a href="#" class="arrow"><img src="../img/arrows.png" alt=""></a>
+                        <a href="#"><img src="../img/pin.png" alt=""></a>
+                    </div>
+                    <input type="text" class="input placement-input" placeholder="DIOR  (30 MONTAIGNE) - 30 Avenue Montaigne, 75008 Paris, France">
+                    <a href="#"><ion-icon name="close" class="close"></ion-icon></a>
+                </div>
+            </div>
+            <div class="middle-part">
+                <div class="middle-part__item">
+                    <img src="../img/moto.png" alt=""> <br />
+                    <a href="#">Documents <br /> & small parcel</a>
+                </div>
+                <div class="middle-part__item">
+                    <img src="../img/car.png" alt=""> <br />
+                    <a href="#">Medium or multiple <br /> small parcels</a>
+                </div>
+                <div class="middle-part__item">
+                    <img src="../img/truck-s.png" alt=""> <br />
+                    <a href="#">Large parcel(s)</a>
+                </div>
+                <div class="middle-part__item">
+                    <img src="../img/truck-l.png" alt=""> <br />
+                    <a href="#">Pallet(s)</a>
+                </div>
+                <div class="middle-part__item">
+                    <img src="../img/frozen.png" alt=""> <br />
+                    <a href="#">Frozen or chilled <br /> pallet(s)</a>
+                </div>
+                <div class="middle-part__item">
+                    <img src="../img/heavy.png" alt=""> <br />
+                    <a href="#">Heavy transport</a>
+                </div>
+            </div>
+            <div class="bottom-part">
+                <p>Date & Heure d'enlèvement</p>
+                <div class="bottom-part__date">
+                    <a href="#">A partir de maintenant</a>
+                    or
+                    <input type="text" class="input date-input" placeholder="07/05/2018 12:00 AM">
+                    <a href="#">VALIDER ET VOIP LE RECATULATIF</a>
+                </div>
+            </div>
+            <div class="google-wrapper">
+                <div id="map"></div>
+                <div id="google-map-overlay"></div>
+            </div>
+        </div>
+
+        <script>
+            function initMap() {
+            // The location of Uluru
+            var uluru = {lat: 40.754932, lng: -73.984016};
+            // The map, centered at Uluru
+            var map = new google.maps.Map(
+              document.getElementById('map'), {zoom: 12, center: uluru});
+            // The marker, positioned at Uluru
+            var marker = new google.maps.Marker({position: uluru, map: map});
+            }
+        </script>
+
+        <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7bQT1RICw6xwEcwyM_SOwHnlWQ2_PL3Y&callback=initMap"></script>
+    </body>
+</html>
